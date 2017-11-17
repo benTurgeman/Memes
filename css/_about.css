@@ -19,7 +19,7 @@
     margin: auto;
     max-width: 1000;
     width: 100%;
-    padding-left: 21px;
+    /* padding-left: 21px; */
     /* padding-right: 21px; */
 
 }
@@ -29,12 +29,14 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
     height: 250px;
     width: 100%;
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 67px;
-    /* border-left-color: black;*/
+    padding-left: 7px;
+    padding-right: 7px;
     border-right: 1px #4c9a85 solid;
     border-left: 1px #4c9a85 solid;
     
@@ -50,6 +52,7 @@
      flex-direction: column;
      justify-content: space-around;
      height: 200px;
+     padding-right: 21px;
     
 
  }
@@ -67,7 +70,7 @@ h3.title{
 .txt{
     height: 85px;
     margin-top: 23px;
-    line-height: 120%;
+    line-height: 21.56px;
     font-size: 12px;
     color: #d7fcf5;
     
@@ -78,7 +81,8 @@ h3.title{
     align-self: flex-end;
     width: 147px;
     height: 25px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
+
 
     
 }
