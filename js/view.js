@@ -2,15 +2,24 @@
 var gImgs;
 
 
+
+
 function initPage() {
     tempImgs()
     renderImgs()
 }
 
+
+
+
+
 function toggleNav() {
     var elNav = document.querySelector('.nav-wrapper')
     elNav.classList.toggle('hide')
 }
+
+
+
 
 function renderImgs() {
     var elImagesContainer = document.querySelector('.images-container')
