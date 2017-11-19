@@ -97,8 +97,8 @@ function renderWorkZone(elImg) {
     gMeme.selectedElImg = elImg
     gMeme.ctx = ctx
 
-    var elMain = document.querySelector('.images-container')
-    elMain.classList.toggle('show')
+    var elMain = document.querySelector('.work-zone')
+    elMain.style = 'display="flex"'
 }
 
 

@@ -5,6 +5,7 @@
 @import '_images.css';
 @import '_work-zone.css';
 @import 'inTouch.css';
+@import '_search.css';
 
 .main-container{
     display: flex;
@@ -15,7 +16,7 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 body{
