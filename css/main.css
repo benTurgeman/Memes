@@ -4,6 +4,7 @@
 @import '_canvas.css';
 @import '_images.css';
 @import '_work-zone.css';
+@import 'inTouch.css';
 
 .main-container{
     display: flex;

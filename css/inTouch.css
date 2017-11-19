@@ -1,0 +1,52 @@
+.inTouch-container{
+    display: flex;
+    background-color:#323232 ;
+    height:560px; 
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.firstHead{
+    color: #e0e0e0;
+    font-size: 30px;
+}
+
+.secondHead{
+    color: #bebebe;
+    font-size: 18px;
+}
+
+.fillDetails{
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+    justify-content: space-between;    
+}
+
+input::placeholder{
+    color:#e0e0e0;
+    padding-left: 11px;
+}
+
+.details{
+    background-color: #454545;
+    width: 580px;
+    height: 38px;
+}
+
+.sendBtn{
+    background-color: #2eb398;
+    width: 90px;
+    height: 37px;
+    font-size: 12px;
+    color:#e0e0e0;
+    border: none;
+    margin-left: 490px;
+}
+
+.msg{
+    widows: 580px;
+    height: 150px;
+    background-color: #454545;
+}
