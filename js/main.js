@@ -1,14 +1,14 @@
 'use strict'
 
 var gMeme = {
-    selectedImgId: 5,
+    selectedImgId: '',
     selectedElImg: '',
     txts: [
         {
-            line: 'I never eat Falafel',
+            line: '',
             size: 20,
             align: 'left',
-            color: 'red'
+            color: ''
         }
     ]
 }
