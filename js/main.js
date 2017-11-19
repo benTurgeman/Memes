@@ -3,12 +3,19 @@
 var gMeme = {
     selectedImgId: '',
     selectedElImg: '',
+    ctx: '',
     txts: [
         {
             line: '',
             size: 20,
             align: 'left',
-            color: ''
+            color: 'black'
+        },
+        {
+            line: '',
+            size: 20,
+            align: 'left',
+            color: 'black'
         }
     ]
 }
@@ -37,24 +44,46 @@ function updateMemeTextSize(idx, value) {
     renderCanvas()
 }
 
-function updateMemeTextAligh(idx, value) {
-    switch (value) {
-        case 'center':
-            console.log('center text')
-            break;
-        case 'right':
-            console.log('move text right')
-            break;
-        case 'left':
-            console.log('move text left')
-            break;
-    }
+function updateMemeTextAligh(idx, elButton) {
+    gMeme.txts[idx].align = elButton.value;
     renderCanvas()
 }
 
-function updateMemeTextColor(idx , color) {
-    gMeme.txt[idx].color = color
+function updateMemeTextColor(idx, elInput) {
+    gMeme.txts[idx].color = elInput.value
     renderCanvas()
+}
+
+
+
+
+function renderCanvas() {
+    var ctx = gMeme.ctx;
+    var img = gMeme.selectedElImg;
+    var txtAlign = alignText(0 , img)
+    ctx.drawImage(img, 0, 0, img.width, img.height, );
+    ctx.font = '400 ' + gMeme.txts[0].size + 'px Arial, sans-serif';
+    ctx.fillStyle = gMeme.txts[0].color;
+    ctx.textAlign = gMeme.txts[0].align;
+    ctx.fillText(gMeme.txts[0].line, txtAlign , 30)
+    ctx.font = '400 ' + gMeme.txts[1].size + 'px Arial, sans-serif';
+    ctx.fillStyle = gMeme.txts[1].color;
+    ctx.textAlign = gMeme.txts[1].align;
+    ctx.fillText(gMeme.txts[1].line, txtAlign , 120)
+}
+
+function alignText(idx, img) {
+    switch (gMeme.txts[idx].align) {
+        case 'left':
+            return 0
+            break;
+        case 'center':
+            return (img.width/2)
+            break;
+        case 'right':
+            return img.width
+            break;
+    }
 }
 
 function renderWorkZone(elImg) {
@@ -66,17 +95,11 @@ function renderWorkZone(elImg) {
     ctx.drawImage(img, 0, 0, img.width, img.height, )
     gMeme.selectedImgId = +elImg.id;
     gMeme.selectedElImg = elImg
+    gMeme.ctx = ctx
+
+    var elMain = document.querySelector('.images-container')
+    elMain.classList.toggle('show')
 }
 
 
-function renderCanvas() {
-    var canvas = document.querySelector('.canvas');
-    var ctx = canvas.getContext('2d');
-    var img = gMeme.selectedElImg
-    canvas.width = img.width
-    canvas.height = img.height
-    ctx.drawImage(img, 0, 0, img.width, img.height, )
-    ctx.font = '400 ' + gMeme.txts[0].size +'px Arial, sans-serif';
-    ctx.fillStyle = `${gMeme.txts[0].color}`;
-    ctx.fillText(gMeme.txts[0].line , 0 , 50)
-}
+

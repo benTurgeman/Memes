@@ -1,24 +1,15 @@
 'use strict'
 var gImgs;
 
-
-
-
 function initPage() {
     tempImgs()
     renderImgs()
 }
 
-
-
-
-
 function toggleNav() {
     var elNav = document.querySelector('.nav-wrapper')
     elNav.classList.toggle('hide')
 }
-
-
 
 
 function renderImgs() {
@@ -32,7 +23,8 @@ function renderImgs() {
     });
     elImagesContainer.innerHTML = strHtml
 }
-// 
+
+
 function tempImgs(){
     var imgs =[]
     var img1 = {

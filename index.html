@@ -27,7 +27,7 @@
         <div class="search-keywords">
 
         </div>
-        <div class="images-container">
+        <div class="images-container show">
 
         </div>
         <div class="work-zone">
@@ -36,13 +36,26 @@
                     <input type="text" id="text0" onkeyup="updateMemeText(0 , this)">
                 </div>
                 <div class="work-buttons">
+                    <input class="text-color" onchange="updateMemeTextColor(0, this)" type="color">
                     <button onclick="updateMemeTextSize(0 , 'plus')">+</button>
                     <button onclick="updateMemeTextSize(0 , 'minus')">-</button>
-                    <button value="right" onclick="updateMemeTextAligh(0, value)">right</button>
-                    <button value="left" onclick="updateMemeTextAligh(0, value)">left</button>
-                    <button value="center" onclick="updateMemeTextAligh(0, value)">center</button>
+                    <button value="left" onclick="updateMemeTextAligh(0, this)">left</button>
+                    <button value="center" onclick="updateMemeTextAligh(0, this)">center</button>
+                    <button value="right" onclick="updateMemeTextAligh(0, this)">right</button>
 
                 </div>
+                <div class="text-container">
+                        <input type="text" id="text1" onkeyup="updateMemeText(1 , this)">
+                    </div>
+                    <div class="work-buttons">
+                        <input class="text-color" onchange="updateMemeTextColor(1, this)" type="color">
+                        <button onclick="updateMemeTextSize(1 , 'plus')">+</button>
+                        <button onclick="updateMemeTextSize(1 , 'minus')">-</button>
+                        <button value="left" onclick="updateMemeTextAligh(1, this)">left</button>
+                        <button value="center" onclick="updateMemeTextAligh(1, this)">center</button>
+                        <button value="right" onclick="updateMemeTextAligh(1, this)">right</button>
+    
+                    </div>
             </div>
             <div class="canvas-container">
                 <canvas class="canvas"></canvas>
@@ -76,16 +89,16 @@
     </div class="getInTouch">
     <div class="inTouch-container">
         <div class="fillInfo">
-            <div class"title">
+            <div class "title">
                 <p class="firstHead">Get In Touch</p>
-                <p class"secondHead">In order to get in touch use the contact form below:</p>
+                <p class "secondHead">In order to get in touch use the contact form below:</p>
             </div>
             <div class="fillDetails">
-            <input type="text" class="details" placeholder="Name(Required)">
-            <input type="text" class="details" placeholder="Email(Required)">
-            <input type="text" class="details" placeholder="Subject(Required)">
-            <input type="text" class="msg" placeholder="Write your message here(Required)">
-            <button class="sendBtn">SEND</button>
+                <input type="text" class="details" placeholder="Name(Required)">
+                <input type="text" class="details" placeholder="Email(Required)">
+                <input type="text" class="details" placeholder="Subject(Required)">
+                <input type="text" class="msg" placeholder="Write your message here(Required)">
+                <button class="sendBtn">SEND</button>
             </div>
 
 
@@ -107,24 +120,24 @@
 
 
 
-</div>
+    </div>
 
 
 
- <!-- <input type="text" class="form-control newsletter__email-input" placeholder="Enter a valid email address"> -->
-        
+    <!-- <input type="text" class="form-control newsletter__email-input" placeholder="Enter a valid email address"> -->
 
-        <div class="canvas-modal">
+
+    <div class="canvas-modal">
+    </div>
+    <div class="canvas-container">
+
+        <div class="canvas">
+            <canvas id="myCanvas" width="200" height="100"></canvas>
         </div>
-        <div class="canvas-container">
+        <div class="tool-bar">
 
-            <div class="canvas">
-                <canvas id="myCanvas" width="200" height="100"></canvas>
-            </div>
-            <div class="tool-bar">
-
-            </div>
         </div>
+    </div>
     </div>
 
 

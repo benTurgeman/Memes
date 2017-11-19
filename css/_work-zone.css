@@ -1,6 +1,4 @@
 .work-zone{
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -9,6 +7,8 @@
     justify-self: center;
     border-left: 1px solid rgb(206, 206, 206);
     border-right: 1px solid rgb(206, 206, 206);
+    margin: 0;
+    padding: 0;
 }
 
 .toolbar{
@@ -16,4 +16,9 @@
     flex-flow: column wrap;
     align-items: center;
     width: 100%;
+    margin-bottom: 10px;
+}
+
+.canvas{
+    margin-top: 20px;
 }
