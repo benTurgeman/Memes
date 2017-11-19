@@ -27,7 +27,7 @@ function renderImgs() {
     gImgs.forEach(function(img) {
         strHtml +=
         `<div class="image-container">
-        <img class="canvas-image" src="images/${img.idx}.jpg"/>
+        <img class="canvas-image" id="${img.idx}" src="images/${img.idx}.jpg" onclick="renderWorkZone(this)"/>
     </div>`
     });
     elImagesContainer.innerHTML = strHtml
@@ -36,11 +36,13 @@ function renderImgs() {
 function tempImgs(){
     var imgs =[]
     var img1 = {
-        idx: 1,
-        keywords: ['game of Thrones','state','funny']
+        idx: 0,
+        url: 'images/0.jpg',
+        keywords: ['game of Thrones','state','funny'],
     }
     var img2 = {
-        idx: 2,
+        idx: 1,
+        url: 'images/1.jpg',
         keywords: ['cartoon', 'wonder', 'funny']
     }
     

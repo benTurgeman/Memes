@@ -32,15 +32,20 @@
         </div>
         <div class="work-zone">
             <div class="toolbar">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
+                <div class="text-container">
+                    <input type="text" id="text0" onkeyup="updateMemeText(0 , this)">
+                </div>
+                <div class="work-buttons">
+                    <button onclick="updateMemeTextSize(0 , 'plus')">+</button>
+                    <button onclick="updateMemeTextSize(0 , 'minus')">-</button>
+                    <button value="right" onclick="updateMemeTextAligh(0, value)">right</button>
+                    <button value="left" onclick="updateMemeTextAligh(0, value)">left</button>
+                    <button value="center" onclick="updateMemeTextAligh(0, value)">center</button>
+
+                </div>
             </div>
-            <div class="canvas">
-                <canvas></canvas>
+            <div class="canvas-container">
+                <canvas class="canvas"></canvas>
             </div>
         </div>
         <div class="about-container">
