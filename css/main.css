@@ -3,9 +3,13 @@
 @import '_about.css';
 @import '_canvas.css';
 @import '_images.css';
-
+@import '_work-zone.css';
 
 .main-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
     margin: 0;
     padding: 0;
     width: 100%;

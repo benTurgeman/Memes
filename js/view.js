@@ -27,13 +27,12 @@ function renderImgs() {
     gImgs.forEach(function(img) {
         strHtml +=
         `<div class="image-container">
-        <div class="tool-bar-container">tool-bar</div>
-        <img class="canvas-image" src="images/${img.idx}.jpg" />
+        <img class="canvas-image" src="images/${img.idx}.jpg"/>
     </div>`
     });
     elImagesContainer.innerHTML = strHtml
 }
-
+// 
 function tempImgs(){
     var imgs =[]
     var img1 = {
