@@ -1,20 +1,39 @@
 .inTouch-container{
-    display: flex;
+    /* display: flex; */
     background-color:#323232 ;
-    height:560px; 
+    /* height:560px; 
     justify-items: center;
     justify-content: space-around;
+    align-items: center; */
+    align-items: flex-end;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.fillInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.allContact{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .firstHead{
     color: #e0e0e0;
     font-size: 30px;
+    display: flex;
 }
 
 .secondHead{
     color: #bebebe;
     font-size: 18px;
+    margin: 0;
 }
 
 .fillDetails{
@@ -22,6 +41,8 @@
     flex-direction: column;
     margin-top: 17px;
     justify-content: space-between;    
+    margin: 20px;
+    
 }
 
 input::placeholder{
@@ -49,4 +70,49 @@ input::placeholder{
     widows: 580px;
     height: 150px;
     background-color: #454545;
+}
+
+.contact-info{
+    display: flex;
+    width:121px;
+    height:54px;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 15px;
+    
+    /* align-items: center; */
+}
+
+.address{
+    margin: 0;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.mail{
+    justify-content: space-between;
+}
+
+.phone{
+    justify-content: space-between;
+}
+
+.symbol{
+    width: 7px;
+    height: 11px;
+}
+
+.side-txt{
+    display: flex;
+    width: 180px;
+    height: 117px;
+    font-size: 12px;
+    color: #bebebe;
+    /* margin: 0; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.phone{
+
+
 }
