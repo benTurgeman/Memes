@@ -11,13 +11,41 @@ function toggleNav() {
     elNav.classList.toggle('hide')
 }
 
+function goBackToImgs() {
+
+    var elImgs = document.querySelector('.images-container')
+    var elCanvas = document.querySelector('.canvas-modal')
+    elImgs.style.display = 'flex';
+    elCanvas.style.display = 'none';
+
+    gMeme = {
+        selectedImgId: '',
+        selectedElImg: '',
+        ctx: '',
+        txts: [
+            {
+                line: '',
+                size: 20,
+                align: 'left',
+                color: 'black'
+            },
+            {
+                line: '',
+                size: 20,
+                align: 'left',
+                color: 'black'
+            }
+        ]
+    }
+}
+
 
 function renderImgs() {
     var elImagesContainer = document.querySelector('.images-container')
     var strHtml = ''
-    gImgs.forEach(function(img) {
+    gImgs.forEach(function (img) {
         strHtml +=
-        `<div class="image-container">
+            `<div class="image-container">
         <img class="canvas-image" id="${img.idx}" src="images/${img.idx}.jpg" onclick="renderWorkZone(this)"/>
     </div>`
     });
@@ -25,19 +53,19 @@ function renderImgs() {
 }
 
 
-function tempImgs(){
-    var imgs =[]
+function tempImgs() {
+    var imgs = []
     var img1 = {
         idx: 0,
         url: 'images/0.jpg',
-        keywords: ['game of Thrones','state','funny'],
+        keywords: ['game of Thrones', 'state', 'funny'],
     }
     var img2 = {
         idx: 1,
         url: 'images/1.jpg',
         keywords: ['cartoon', 'wonder', 'funny']
     }
-    
+
     imgs.push(img1);
     imgs.push(img2);
 
@@ -46,10 +74,10 @@ function tempImgs(){
 
 
 
-function createImage(idx, keywords){
+function createImage(idx, keywords) {
     var img = {
         idx: '',
-        keywords: ['','']
+        keywords: ['', '']
     }
 }
 
@@ -58,27 +86,24 @@ function imgSearchBar() {
     var searchTxt = searchWord.value;
     var tempImgs = [];
 
-    gImgs.forEach(function(img,idx) {
+    gImgs.forEach(function (img, idx) {
         //console.log('img',img.keywords);
         //console.log('idx',idx);
         var keywords = img.keywords;
 
-        keywords.forEach(function(keyword){
-            if(keyword === searchTxt)
-            {
+        keywords.forEach(function (keyword) {
+            if (keyword === searchTxt) {
                 tempImgs.push(idx);
             }
         });
-        
+
     });
 
     var imagesOutput = document.querySelector('#imagesOutput');
     imagesOutput.innerHTML = "";
 
-    tempImgs.forEach(function(imgIdx){
+    tempImgs.forEach(function (imgIdx) {
         imagesOutput.innerHTML += imgIdx;
     });
-
-    
 }
 

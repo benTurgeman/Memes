@@ -1,21 +1,14 @@
-.canvas-modal-container{
-    display: flex;
 
-}
 
 .canvas-modal{
-   position: absolute;
-    display: flex;
-    top:100px;
+    display: none;
     width: 80%;
     background: lightblue;
-    margin-top: 100px;
     border: 1px solid rgb(206, 206, 206);
-    align-items: center;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     z-index: 2;
 }
-
 
 .work-zone{
     display: flex;
