@@ -44,6 +44,7 @@
     margin-top: 17px;
     justify-content: space-between;    
     margin: 20px;
+    height: 330px;
     
 }
 
@@ -76,23 +77,47 @@ input::placeholder{
 
 .contact-info{
     display: flex;
+<<<<<<< HEAD
+    width:181px;
+    height:217px;
+    flex-direction: column;
+    justify-content: space-between;
+    /* line-height: 15px; */
+    margin: 0;
+    
+    /* align-items: center; */
+=======
     height:54px;
     flex-direction: column;
     justify-content: space-between;
     line-height: 15px;
+>>>>>>> 5799db3ca777de235a6af53b84c3d371596ab025
 }
 
 .address{
     margin: 0;
+    display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    width: 150px;
 }
 .mail{
+    margin: 0;
+    display: flex;
     justify-content: space-between;
+    width: 150px;
+    
 }
 
 .phone{
-    justify-content: space-between;
+margin: 0;
+display: flex;
+justify-content: space-between;
+width: 150px;
+
+
+
+
+
 }
 
 .symbol{
@@ -112,5 +137,17 @@ input::placeholder{
 
 .phone{
 
+
+}
+
+.footer{
+    background-color: #222222;
+    width: 1020px;
+    height: 43px;
+}
+
+.copyRights{
+    color: #454545;
+    font-size: 12px;
 
 }
