@@ -17,6 +17,7 @@
 }
 .secondHead{
     font-size: 18px;
+    overflow-wrap: normal;
 }
 
 p{
