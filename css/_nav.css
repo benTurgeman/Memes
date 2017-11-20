@@ -4,7 +4,8 @@
     width: 100%;
     background-color: #292929;
     box-sizing: border-box;
-    height: 100px;
+    height: 65px; 
+    /* tamara */
     color: #ffffff;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -52,4 +53,9 @@
     max-width: 150px;
     height: 50px;
     cursor: pointer;
+}
+
+.logo{
+    height: 55px;
+    width: 64px;
 }

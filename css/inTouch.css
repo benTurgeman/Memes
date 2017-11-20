@@ -131,3 +131,15 @@ width: 150px;
 
 
 }
+
+.footer{
+    background-color: #222222;
+    width: 1020px;
+    height: 43px;
+}
+
+.copyRights{
+    color: #454545;
+    font-size: 12px;
+
+}
