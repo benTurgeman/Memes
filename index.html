@@ -44,33 +44,42 @@
             <div id="imagesOutput">
             </div>
         </div>
-        <div class="images-container show">
-
+        <div class="images-container">
         </div>
-        <div class="about-container">
-            <div class="about-us">
-                <div class="us-details">
-                    <img class="img" src="images/one.png">
-                    <div class="info">
-                        <h2 class="title"> The Ben and Tamara Group</h2>
-                        <h3 class="title">super tired Coding academy students</h3>
-                        <p class="txt"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                            type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing
-                            and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book </p>
-                        <div class="social-media">
-                            <img src="images/FB.png">
-                            <img src="images/twit.png">
-                            <img src="images/gplus.png">
-                            <img src="images/pr.png">
-                            <img src="images/in.png">
-                            <img src="images/p.png">
-                        </div>
+        <div class="canvas-modal">
+                <button class="close-canvas" onclick="goBackToImgs()">X</button>
+            <div class="work-zone">
+                <div class="toolbar">
+                    <div class="text-container">
+                        <input type="text" id="text0" onkeyup="updateMemeText(0 , this)">
+                    </div>
+                    <div class="work-buttons">
+                        <input class="text-color" onchange="updateMemeTextColor(0, this)" type="color">
+                        <button onclick="updateMemeTextSize(0 , 'plus')">+</button>
+                        <button onclick="updateMemeTextSize(0 , 'minus')">-</button>
+                        <button value="left" onclick="updateMemeTextAligh(0, this)">left</button>
+                        <button value="center" onclick="updateMemeTextAligh(0, this)">center</button>
+                        <button value="right" onclick="updateMemeTextAligh(0, this)">right</button>
+
+                    </div>
+                    <div class="text-container">
+                        <input type="text" id="text1" onkeyup="updateMemeText(1 , this)">
+                    </div>
+                    <div class="work-buttons">
+                        <input class="text-color" onchange="updateMemeTextColor(1, this)" type="color">
+                        <button onclick="updateMemeTextSize(1 , 'plus')">+</button>
+                        <button onclick="updateMemeTextSize(1 , 'minus')">-</button>
+                        <button value="left" onclick="updateMemeTextAligh(1, this)">left</button>
+                        <button value="center" onclick="updateMemeTextAligh(1, this)">center</button>
+                        <button value="right" onclick="updateMemeTextAligh(1, this)">right</button>
+
                     </div>
                 </div>
+                <div class="canvas-container">
+                    <canvas class="canvas"></canvas>
+                </div>
             </div>
+<<<<<<< HEAD
         </div>
     </div class="getInTouch" id="inTouch">
     <div class="inTouch-container">
@@ -95,22 +104,77 @@
             <div class="address">
                 <div class="symbol">
                     <img src="images/loc.png" >
+=======
+    </div>
+    <div class="about-container">
+        <div class="about-us">
+            <div class="us-details">
+                <img class="img" src="images/one.png">
+                <div class="info">
+                    <h2 class="title"> The Ben and Tamara Group</h2>
+                    <h3 class="title">super tired Coding academy students</h3>
+                    <p class="txt"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book </p>
+                    <div class="social-media">
+                        <img src="images/FB.png">
+                        <img src="images/twit.png">
+                        <img src="images/gplus.png">
+                        <img src="images/pr.png">
+                        <img src="images/in.png">
+                        <img src="images/p.png">
+                    </div>
                 </div>
-                Elm St. 14/05 Lost City
             </div>
-            <div class="phone">
-                <div class="symbol">
-                    <img src="images/phone.png"> 
+        </div>
+    </div>
+    <div class="getInTouch">
+        <div class="inTouch-container">
+            <div class="fillInfo">
+                <div class "title">
+                    <p class="firstHead">Get In Touch</p>
+                    <p class "secondHead">In order to get in touch use the contact form below:</p>
                 </div>
-                + 3528 331 86 35 
+                <div class="fillDetails">
+                    <input type="text" class="details" placeholder="Name(Required)">
+                    <input type="text" class="details" placeholder="Email(Required)">
+                    <input type="text" class="details" placeholder="Subject(Required)">
+                    <input type="text" class="msg" placeholder="Write your message here(Required)">
+                    <button class="sendBtn">SEND</button>
+                </div>
             </div>
-            <div class="mail">
+        </div>
+        <div class="allContact">
+            <div class="side-txt">
+                <div class="side-txt">
+                    <p>Quisque Hendrerit: purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin
+                        sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. </p>
+>>>>>>> 5799db3ca777de235a6af53b84c3d371596ab025
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="address">
+                    <div class="symbol">
+                        <img src="images/loc.png">
+                    </div>
+                    Elm St. 14/05 Lost City
+                </div>
+                <div class="phone">
+                    <div class="symbol">
+                        <img src="images/phone.png">
+                    </div>
+                    + 3528 331 86 35
+                </div>
+                <div class="mail">
                     <div class="symbol">
                         <img src="images/mail.png">
                     </div>
                     info@hexalcorp.com
                 </div>
             </div>
+<<<<<<< HEAD
             <div class=" footer">
                 <p class="copyRights">© Copyright 2013 by PSDchat</p>
             </div>
@@ -162,6 +226,15 @@
                 </div>
             </div>
     </div>
+=======
+        </div>
+    </div>
+    <!-- <input type="text" class="form-control newsletter__email-input" placeholder="Enter a valid email address"> -->
+
+    </div>
+
+
+>>>>>>> 5799db3ca777de235a6af53b84c3d371596ab025
     <script src="js/main.js "></script>
     <script src="js/view.js "></script>
 </body>

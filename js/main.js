@@ -61,11 +61,12 @@ function renderCanvas() {
     var ctx = gMeme.ctx;
     var img = gMeme.selectedElImg;
     var txtAlign = alignText(0 , img)
-    ctx.drawImage(img, 0, 0, img.width, img.height, );
+    ctx.drawImage(img, 0, 0, 388, 150);
     ctx.font = '400 ' + gMeme.txts[0].size + 'px Arial, sans-serif';
     ctx.fillStyle = gMeme.txts[0].color;
     ctx.textAlign = gMeme.txts[0].align;
     ctx.fillText(gMeme.txts[0].line, txtAlign , 30)
+    var txtAlign = alignText(1 , img)
     ctx.font = '400 ' + gMeme.txts[1].size + 'px Arial, sans-serif';
     ctx.fillStyle = gMeme.txts[1].color;
     ctx.textAlign = gMeme.txts[1].align;
@@ -97,8 +98,10 @@ function renderWorkZone(elImg) {
     gMeme.selectedElImg = elImg
     gMeme.ctx = ctx
 
-    var elMain = document.querySelector('.work-zone')
-    elMain.style = 'display="flex"'
+    var elImgs = document.querySelector('.images-container')
+    var elCanvas = document.querySelector('.canvas-modal')
+    elImgs.style.display = 'none';
+    elCanvas.style.display = 'flex';
 }
 
 
