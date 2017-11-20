@@ -17,6 +17,7 @@
 }
 .contact-header{
     display: flex;
+    flex-flow: row wrap;
     overflow-wrap: normal;
 }
 .us-details{

@@ -9,11 +9,10 @@
 .contact-header{
     display: flex;
     flex-flow: column wrap;
-    max-height: 80px;
+    max-height: fit-content;;
     font-size: 30px;
     flex: 1;
-    margin-top: 20px;
-    /* margin-bottom: 20px; */
+    margin: 20px 0;
     box-sizing: border-box;
 }
 .secondHead{
