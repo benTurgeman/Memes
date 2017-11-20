@@ -15,11 +15,7 @@
     padding: 0;
     
 }
-.contact-header{
-    display: flex;
-    flex-flow: row wrap;
-    overflow-wrap: normal;
-}
+
 .us-details{
     display: flex;
     flex-flow: row wrap;

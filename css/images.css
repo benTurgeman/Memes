@@ -14,11 +14,15 @@
     width: auto;
     align-items: center;
     justify-content: center;
+    max-width: 250px;
+    overflow: hidden;
 }
 .canvas-image{
+    overflow: hidden;
     max-height: 180px;
-    width: 300px;
+    max-width: auto;
     margin-bottom: 30px;
+
 }
 
 

@@ -9,17 +9,17 @@ var gMeme = {
     txts: [
         {
             line: '',
-            size: 20,
-            align: 'left',
-            color: 'black',
-            height: 30
+            size: 45,
+            align: 'center',
+            color: 'white',
+            height: 40
         },
         {
             line: '',
-            size: 20,
-            align: 'left',
-            color: 'black',
-            height: 150
+            size: 45,
+            align: 'center',
+            color: 'white',
+            height: 240
         },
     ]
 }
@@ -80,15 +80,21 @@ function renderCanvas() {
     var txtAlign = alignText(0, gCanvas)
     ctx.drawImage(img, 0, 0, 340, 260);
     ctx.restore()
-    ctx.font = '400 ' + gMeme.txts[0].size + 'px Arial, sans-serif';
+    ctx.font = '400 ' + gMeme.txts[0].size + 'px Impact, sans-serif';
     ctx.fillStyle = gMeme.txts[0].color;
     ctx.textAlign = gMeme.txts[0].align;
     ctx.fillText(gMeme.txts[0].line, txtAlign, gMeme.txts[0].height)
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'black';
+    ctx.strokeText(gMeme.txts[0].line, txtAlign, gMeme.txts[0].height);
     var txtAlign = alignText(1, gCanvas)
-    ctx.font = '400 ' + gMeme.txts[1].size + 'px Arial, sans-serif';
+    ctx.font = '400 ' + gMeme.txts[1].size + 'px Impact, sans-serif';
     ctx.fillStyle = gMeme.txts[1].color;
     ctx.textAlign = gMeme.txts[1].align;
     ctx.fillText(gMeme.txts[1].line, txtAlign, gMeme.txts[1].height)
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'black';
+    ctx.strokeText(gMeme.txts[1].line, txtAlign, gMeme.txts[1].height);
 }
 
 
