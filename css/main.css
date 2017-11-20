@@ -1,11 +1,11 @@
 
-@import '_nav.css';
-@import '_about.css';
-@import '_canvas.css';
-@import '_images.css';
-@import '_work-zone.css';
+@import 'nav.css';
+@import 'about.css';
+@import 'canvas.css';
+@import 'images.css';
+@import 'work-zone.css';
 @import 'inTouch.css';
-@import '_search.css';
+@import 'search.css';
 
 .main-container{
     display: flex;
