@@ -7,6 +7,10 @@
 	padding: 0;
 }
 
+.search-keywords{
+	margin-bottom: 20px;
+}
+
 input {
 	border: none;
 	font-family: inherit;
@@ -62,4 +66,19 @@ input {
 }
 #search input[type="submit"]:hover {
 	background: #189e83;
+}
+
+.custom-file-upload{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	background: #1bba9a;
+	color: #fff;
+	font-weight: bold;
+	padding: 6px 10px;
+}
+
+.temp-canvas{
+	display: none;
 }

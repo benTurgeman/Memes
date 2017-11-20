@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/utilites/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css“>
 </head>
 
 <body onload="initPage()">
@@ -17,94 +18,175 @@
             <div class="nav-logo">
                 <img class="logo" src="images/logo.png">
             </div>
-            <div class="nav-hamburger" onclick="toggleNav()">☰
-                <div class="nav-wrapper hide">
-                    <div class="nav-buttons animated fadeInDown hide">
+            <div class="nav-hamburger" onclick="toggleNavButtons()">☰
+                <div class="nav-wrapper">
+                    <div class="nav-buttons">
                         <div class="nav-button">Portfolio</div>
-                        <div class="nav-button">About</div>
+                        <a class="nav-button" href="#aboutUs">About</a>
                         <div class="nav-button">Blog</div>
-                        <div class="nav-button"> <a href="#inTouch"> GET IN TOUCH </a>Get in touch</div>
+                        <a class="nav-button" href="#inTouch">Get in touch</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="search-keywords">
-            <div class="container">
-                <div id="search">
-                    <div class="fieldset">
-                        <input type="search" id="searchBar" name="search" value="What are you looking for?" onBlur="if(this.value=='')this.value='What are you looking for?'"
-                            onFocus="if(this.value=='What are you looking for?')this.value='' ">
-                        <!-- JS because of IE support; better: placeholder="What are you looking for?" -->
-                        <input type="submit" value="Search" class="button" onclick="imgSearchBar();">
+        <div class="main-display-top">
+            <div class="main-display-header">
+                <h1>Choose a picture</h1>
+            </div>
+            <div class="search-keywords">
+                <div class="container">
+                    <div id="search">
+                        <div class="fieldset">
+                            <input type="search" id="searchBar" name="search" value="What are you looking for?">
+                            <input type="submit" value="Search" class="button" onclick="imgSearchBar();">
+                        </div>
                     </div>
                 </div>
-                <!-- end search -->
             </div>
-            <!-- end container -->
-            <div id="imagesOutput">
-            </div>
+            <!-- <div class="upload-file">
+                <label class="custom-file-upload">
+                    <input type="file" accept="image/*" onchange="uploadNewImage(this)"/> Upload Your Image
+                </label>
+                <canvas class="temp-canvas" width="400" height="300" id="canvas"/>
+            </div> -->
         </div>
         <div class="images-container">
         </div>
         <div class="canvas-modal">
-                <button class="close-canvas" onclick="goBackToImgs()">X</button>
+            <button class="close-canvas class=" btn "" onclick="goBackToImgs()">X</button>
             <div class="work-zone">
                 <div class="toolbar">
                     <div class="text-container">
-                        <input type="text" id="text0" onkeyup="updateMemeText(0 , this)">
+                        <input type="text" class="canvas-text-input" id="text" onkeyup="updateMemeText(0 , this)" placeholder="Write first line here">
                     </div>
                     <div class="work-buttons">
-                        <input class="text-color" onchange="updateMemeTextColor(0, this)" type="color">
-                        <button onclick="updateMemeTextSize(0 , 'plus')">+</button>
-                        <button onclick="updateMemeTextSize(0 , 'minus')">-</button>
-                        <button value="left" onclick="updateMemeTextAligh(0, this)">left</button>
-                        <button value="center" onclick="updateMemeTextAligh(0, this)">center</button>
-                        <button value="right" onclick="updateMemeTextAligh(0, this)">right</button>
-
+                        <input class="text-color btn" onchange="updateMemeTextColor(0 , this)" type="color">
+                        <button class="btn" onclick="updateMemeTextSize(0 , 'plus')">+</button>
+                        <button class="btn" onclick="updateMemeTextSize(0 , 'minus')">-</button>
+                        <button class="btn" value="left" onclick="updateMemeTextAligh(0, this)">
+                            <i class="fa fa-align-left"></i>
+                        </button>
+                        <button class="btn" value="center" onclick="updateMemeTextAligh(0, this)">
+                            <i class="fa fa-align-center"></i>
+                        </button>
+                        <button class="btn" value="right" onclick="updateMemeTextAligh(0, this)">
+                            <i class="fa fa-align-right"></i>
+                        </button>
+                        <button class="btn" onclick="changeTextHeight(0 , 'plus')">
+                            <i class="fa fa-angle-up"></i>
+                        </button>
+                        <button class="btn" onclick="changeTextHeight(0 , 'minus')">
+                            <i class="fa fa-angle-down"></i>
+                        </button>
                     </div>
+                </div>
+                <div class="toolbar">
                     <div class="text-container">
-                        <input type="text" id="text1" onkeyup="updateMemeText(1 , this)">
+                        <input type="text" class="canvas-text-input" id="text" onkeyup="updateMemeText(1 , this)" placeholder="Write second line here">
                     </div>
                     <div class="work-buttons">
-                        <input class="text-color" onchange="updateMemeTextColor(1, this)" type="color">
-                        <button onclick="updateMemeTextSize(1 , 'plus')">+</button>
-                        <button onclick="updateMemeTextSize(1 , 'minus')">-</button>
-                        <button value="left" onclick="updateMemeTextAligh(1, this)">left</button>
-                        <button value="center" onclick="updateMemeTextAligh(1, this)">center</button>
-                        <button value="right" onclick="updateMemeTextAligh(1, this)">right</button>
-
+                        <input class="text-color btn" onchange="updateMemeTextColor(1 , this)" type="color">
+                        <button class="btn" onclick="updateMemeTextSize(1 , 'plus')">+</button>
+                        <button class="btn" onclick="updateMemeTextSize(1 , 'minus')">-</button>
+                        <button class="btn" value="left" onclick="updateMemeTextAligh(1, this)">
+                            <i class="fa fa-align-left"></i>
+                        </button>
+                        <button class="btn" value="center" onclick="updateMemeTextAligh(1, this)">
+                            <i class="fa fa-align-center"></i>
+                        </button>
+                        <button class="btn" value="right" onclick="updateMemeTextAligh(1, this)">
+                            <i class="fa fa-align-right"></i>
+                        </button>
+                        <button class="btn" onclick="changeTextHeight(1, 'plus')">
+                            <i class="fa fa-angle-up"></i>
+                        </button>
+                        <button class="btn" onclick="changeTextHeight(1, 'minus')">
+                            <i class="fa fa-angle-down"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="canvas-container">
                     <canvas class="canvas"></canvas>
                 </div>
+                <div class="dwn-btn-container">
+                    <a href="#" id="dwn-btn"  onclick="downloadMeme(this)">Download Your Meme</a>
+                </div>
             </div>
-    </div>
-    <div class="about-container">
-        <div class="about-us">
-            <div class="us-details">
-                <img class="img" src="images/one.png">
-                <div class="info">
-                    <h2 class="title"> The Ben and Tamara Group</h2>
-                    <h3 class="title">super tired Coding academy students</h3>
-                    <p class="txt"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book </p>
+        </div>
+        <div class="about-container" id="aboutUs">
+            <div class="about-us">
+                <div class="our-img-container">
+                    <img class="img" src="images/one.png">
+                </div>
+                <div class="us-details">
+                    <div class="info-header">
+                        <h2 class="title"> The Ben and Tamara Group</h2>
+                        <h3 class="title">super tired Coding academy students</h3>
+                    </div>
+                    <div class="info-content">
+                        <p class="txt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique,
+                            enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie
+                            fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet
+                            velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue,
+                            eget consectetur sem dui non urna </p>
+                    </div>
                     <div class="social-media">
-                        <img src="images/FB.png">
-                        <img src="images/twit.png">
-                        <img src="images/gplus.png">
-                        <img src="images/pr.png">
-                        <img src="images/in.png">
-                        <img src="images/p.png">
+                        <img class="social-media-icon" src="images/FB.png">
+                        <img class="social-media-icon" src="images/twit.png">
+                        <img class="social-media-icon" src="images/gplus.png">
+                        <img class="social-media-icon" src="images/pr.png">
+                        <img class="social-media-icon" src="images/in.png">
+                        <img class="social-media-icon" src="images/p.png">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="getInTouch">
+        <div class="contact-container" id="inTouch">
+            <div class="contact-header">
+                <p class="firstHead">Get In Touch</p>
+                <p class="secondHead">In order to get in touch use the contact form below:</p>
+            </div>
+            <div class="contcact-contnet-container">
+                <div class="contact-details1">
+                    <div class="contacter-detail">
+                        <input type="text" class="details" placeholder="Name(Required)">
+                        <input type="text" class="details" placeholder="Email(Required)">
+                        <input type="text" class="details" placeholder="Subject(Required)">
+                    </div>
+                    <div class="contact-info">
+                        <p>Quisque Hendrerit: purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin
+                            sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. </p>
+                    </div>
+                </div>
+                <div class="contact-details2">
+                    <div class="contact-subject">
+                        <input type="text" class="msg" placeholder="Write your message here(Required)">
+                        <button class="sendBtn">SEND</button>
+                    </div>
+                    <div class="contact-address">
+                        <div class="address">
+                            <div class="symbol">
+                                <img src="images/loc.png">
+                            </div>
+                            &nbsp&nbsp Elm St. 14/05 Lost City
+                        </div>
+                        <div class="phone">
+                            <div class="symbol">
+                                <img src="images/phone.png">
+                            </div>
+                            &nbsp + 3528 331 86 35
+                        </div>
+                        <div class="mail">
+                            <div class="symbol">
+                                <img src="images/mail.png">
+                            </div>
+                            &nbsp info@hexalcorp.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="getInTouch">
         <div class="inTouch-container">
             <div class="fillInfo">
                 <div class "title">
@@ -147,9 +229,7 @@
                     info@hexalcorp.com
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- <input type="text" class="form-control newsletter__email-input" placeholder="Enter a valid email address"> -->
+        </div> -->
     </div>
 
 

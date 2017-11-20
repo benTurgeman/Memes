@@ -4,8 +4,7 @@
     width: 100%;
     background-color: #292929;
     box-sizing: border-box;
-    height: 65px; 
-    /* tamara */
+    /* height: 65px;  */
     color: #ffffff;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -28,18 +27,14 @@
     cursor: pointer;
 }
 
-.hide{
-    display: none;
-}
-
 
 .nav-buttons{
-    display: flex;
+    display: none;
     flex-flow: row nowrap;
     justify-content: space-around;
     width: 100%;
     position: absolute;
-    top: 100px;
+    margin-top: 25px;
     left: 0;
 }
 

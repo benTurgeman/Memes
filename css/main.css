@@ -5,6 +5,7 @@
 @import '_images.css';
 @import '_work-zone.css';
 @import 'inTouch.css';
+@import '_search.css';
 
 .main-container{
     display: flex;
@@ -22,11 +23,12 @@ body{
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
-=======
+
+a{
+     text-decoration: none;
+}
 
 
->>>>>>> 5799db3ca777de235a6af53b84c3d371596ab025
 img{
     width: 100%;
     max-width: 100%;
