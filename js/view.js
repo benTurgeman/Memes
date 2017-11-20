@@ -118,7 +118,7 @@ function imgSearchBar() {
     var searchWord = document.querySelector('#searchBar');
     var searchTxt = searchWord.value;
     var tempImgs = [];
-    if (searchTxt === 'What are you looking for?') {
+    if (searchTxt === 'What are you looking for?' || searchTxt === '') {
         renderImgs(gImgs)
         return;
     }
