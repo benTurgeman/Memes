@@ -45,18 +45,18 @@ function goBackToImgs() {
         txts: [
             {
                 line: '',
-                size: 20,
-                align: 'left',
-                color: 'black',
-                height: 30
+                size: 45,
+                align: 'center',
+                color: 'white',
+                height: 40
             },
             {
                 line: '',
-                size: 20,
-                align: 'left',
-                color: 'black',
-                height: 150
-            }
+                size: 45,
+                align: 'center',
+                color: 'white',
+                height: 240
+            },
         ]
     }
     var elInput = document.querySelectorAll('#text')
