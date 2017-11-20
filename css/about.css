@@ -15,7 +15,10 @@
     padding: 0;
     
 }
-
+.contact-header{
+    display: flex;
+    overflow-wrap: normal;
+}
 .us-details{
     display: flex;
     flex-flow: row wrap;
@@ -26,9 +29,7 @@
     margin-top: 10px;
 }
 
-.our-img-container{
-    
-}
+
 .img{
     width: 90%;
     height: auto;
